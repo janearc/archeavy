@@ -13,7 +13,7 @@ func main() {
 	})
 
 	// Initialize the HTML template engine
-	engine := html.New("./views", ".html")
+	engine := html.New("/app/views", ".html")
 
 	// Create a new Fiber instance with the template engine
 	app := fiber.New(fiber.Config{
