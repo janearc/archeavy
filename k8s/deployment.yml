@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: archeavy-static-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: archeavy
+  template:
+    metadata:
+      labels:
+        app: archeavy
+    spec:
+      containers:
+        - name: archeavy-static
+          image: 620055013658.dkr.ecr.us-west-2.amazonaws.com/archeavy/static:latest
+          ports:
+            - containerPort: 8080
